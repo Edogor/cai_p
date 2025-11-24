@@ -511,6 +511,12 @@ CAI leverages the `.env` file to load configuration at launch. To facilitate the
 
 CAI does NOT provide API keys for any model by default. Don't ask us to provide keys, use your own or host your own models.
 
+> **💡 Free Model Options Available**
+> Looking for free alternatives to commercial models? Check our [**Free Models Guide**](docs/free_models_guide.md) for comprehensive instructions on using:
+> - **Groq Cloud API** (free tier with fast inference)
+> - **Ollama** (100% free local models)
+> - Other free options suitable for cybersecurity tasks
+
 
 :warning: Note:
 

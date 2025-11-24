@@ -84,6 +84,7 @@ nav:
       # TODO: Crear página destacada para Alias Models
       # - '⭐ Alias Models (CAI PRO)': cai_alias_models.md
       - Available Models: cai_list_of_models.md
+      - '🆓 Free Models Guide': free_models_guide.md
       - Model Providers:
           - OpenRouter: providers/openrouter.md
           - Ollama: providers/ollama.md
