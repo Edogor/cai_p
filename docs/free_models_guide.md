@@ -100,7 +100,7 @@ CAI> Help me understand this exploit code and adapt it for my target
 
 ### Groq Rate Limits (Free Tier)
 
-As of 2024, Groq's free tier typically includes:
+Groq's free tier typically includes:
 - **Requests per minute**: 30 RPM (varies by model)
 - **Requests per day**: 14,400 RPD
 - **Tokens per minute**: 20,000+ TPM

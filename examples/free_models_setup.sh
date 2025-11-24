@@ -49,7 +49,19 @@ setup_groq() {
     read -p "Enter your Groq API key (starts with gsk_): " GROQ_KEY
     
     if [[ ! $GROQ_KEY =~ ^gsk_ ]]; then
-        print_warning "API key should start with 'gsk_'. Continuing anyway..."
+        print_warning "API key should start with 'gsk_'."
+        read -p "Continue with this key anyway? (y/n): " CONFIRM
+        if [[ ! $CONFIRM =~ ^[Yy]$ ]]; then
+            print_error "Setup cancelled"
+            exit 1
+        fi
+    fi
+    
+    # Backup existing .env if present
+    if [ -f .env ]; then
+        BACKUP_FILE=".env.backup.$(date +%Y%m%d_%H%M%S)"
+        print_warning "Existing .env found. Creating backup: $BACKUP_FILE"
+        cp .env "$BACKUP_FILE"
     fi
     
     # Create .env configuration
@@ -163,6 +175,13 @@ setup_ollama() {
                 print_success "Model downloaded"
             fi
         fi
+    fi
+    
+    # Backup existing .env if present
+    if [ -f .env ]; then
+        BACKUP_FILE=".env.backup.$(date +%Y%m%d_%H%M%S)"
+        print_warning "Existing .env found. Creating backup: $BACKUP_FILE"
+        cp .env "$BACKUP_FILE"
     fi
     
     # Create .env configuration
